@@ -1,12 +1,14 @@
 import Link from 'next/link';
 import { useState, useEffect } from 'react';
 import { formatCurrency } from '../lib/currency';
+import MarketingTicker from '../components/MarketingTicker';
 
 export default function AstroVedaHome() {
   const [birthData, setBirthData] = useState({ date: '', time: '', city: '' });
 
   return (
     <div className="min-h-screen bg-[#FBFBFB] flex flex-col items-center">
+      <MarketingTicker />
       {/* Premium Header */}
       <header className="w-full max-w-6xl mx-auto py-8 px-6 flex justify-between items-center border-b border-gray-200">
         <div className="flex items-center gap-3">

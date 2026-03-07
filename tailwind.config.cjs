@@ -15,9 +15,14 @@ module.exports = {
           '0%': { backgroundPosition: '-200% center' },
           '100%': { backgroundPosition: '200% center' },
         },
+        marquee: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
       },
       animation: {
         shimmer: 'shimmer 2s ease-in-out infinite',
+        marquee: 'marquee 30s linear infinite',
       },
     },
   },
