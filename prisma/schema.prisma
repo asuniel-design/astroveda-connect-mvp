@@ -1,0 +1,34 @@
+// AstraVeda Sovereign Database Schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model Identity {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  place     String?
+  star      String?
+  reason    String?
+  status    String   @default("PENDING_PAYMENT")
+  createdAt DateTime @default(now())
+  apiKeys   ApiKey[]
+
+  @@map("identities")
+}
+
+model ApiKey {
+  id         Int      @id @default(autoincrement())
+  key        String   @unique
+  identityId Int
+  identity   Identity @relation(fields: [identityId], references: [id])
+  tier       String   @default("SOVEREIGN_ELITE")
+  isActive   Boolean  @default(true)
+  createdAt  DateTime @default(now())
+
+  @@map("api_keys")
+}
