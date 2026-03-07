@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { formatCurrency } from '../lib/currency';
 
 export default function AstroVedaHome() {
   const [birthData, setBirthData] = useState({ date: '', time: '', city: '' });
@@ -39,7 +40,7 @@ export default function AstroVedaHome() {
               <input type="time" className="p-3 border border-gray-200 rounded text-sm outline-none focus:border-[#BFA15C] transition" />
             </div>
             <input type="text" placeholder="City & Country of Birth" className="w-full p-3 border border-gray-200 rounded text-sm outline-none focus:border-[#BFA15C] transition" />
-            <button className="w-full bg-[#BFA15C] text-white py-3 rounded tracking-widest uppercase text-xs font-semibold hover:bg-[#a68a4a] transition">
+            <button className="w-full bg-[#BFA15C] text-white py-3 rounded tracking-widest uppercase text-xs font-semibold hover:bg-[#a68a4a] transition shimmer-gold">
               Reveal Ephemeris Data
             </button>
           </div>
@@ -72,6 +73,10 @@ export default function AstroVedaHome() {
                 <h4 className="font-serif text-xl text-gray-900">Dr. Alisha Rao</h4>
                 <p className="text-xs text-[#BFA15C] uppercase tracking-widest mb-4">Vedic Astrologer</p>
                 <p className="text-sm text-gray-600 mb-4 line-clamp-2">Specializing in career trajectories and relationship compatibility using traditional Parashari techniques.</p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-lg font-serif text-gray-900">{formatCurrency(49)}</span>
+                  <span className="text-xs text-gray-500">per session</span>
+                </div>
                 <button className="text-xs font-semibold tracking-widest border-b border-gray-900 pb-1 w-fit hover:text-[#BFA15C] hover:border-[#BFA15C] transition">
                   Start Consultation
                 </button>
@@ -87,6 +92,10 @@ export default function AstroVedaHome() {
                 <h4 className="font-serif text-xl text-gray-900">Marcus Vance</h4>
                 <p className="text-xs text-[#BFA15C] uppercase tracking-widest mb-4">Tarot & Ephemeris</p>
                 <p className="text-sm text-gray-600 mb-4 line-clamp-2">Combining Swiss Ephemeris data with intuitive readings from a serene, modern perspective.</p>
+                <div className="flex items-center justify-between mb-4">
+                  <span className="text-lg font-serif text-gray-900">{formatCurrency(59)}</span>
+                  <span className="text-xs text-gray-500">per session</span>
+                </div>
                 <button className="text-xs font-semibold tracking-widest border-b border-gray-900 pb-1 w-fit hover:text-[#BFA15C] hover:border-[#BFA15C] transition">
                   Start Consultation
                 </button>
