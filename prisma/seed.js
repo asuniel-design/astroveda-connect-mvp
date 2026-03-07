@@ -1,4 +1,7 @@
 import { PrismaClient } from '@prisma/client';
+
+// Simple initialization: Prisma will automatically look for 
+// DATABASE_URL in the environment provided by Railway.
 const prisma = new PrismaClient();
 
 async function main() {
