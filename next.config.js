@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   experimental: {
-    turbo: {
+    turbopack: {
       // Enable Turbopack
       enabled: true,
       // Root directory for Turbopack resolution
@@ -14,10 +14,21 @@ const nextConfig = {
     buildActivityPosition: 'bottom-right',
   },
   images: {
-    domains: ['images.unsplash.com', 'assets.vercel.com'],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.vercel.com',
+        pathname: '/**',
+      },
+    ],
     // Enable Turbopack image optimization
     formats: ['image/avif', 'image/webp'],
   },
 };
 
-module.exports = nextConfig;
+export default nextConfig;
