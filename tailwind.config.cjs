@@ -9,7 +9,16 @@ module.exports = {
       colors: {
         parchment: '#FBFBFB',
         gold: '#BFA15C'
-      }
+      },
+      keyframes: {
+        shimmer: {
+          '0%': { backgroundPosition: '-200% center' },
+          '100%': { backgroundPosition: '200% center' },
+        },
+      },
+      animation: {
+        shimmer: 'shimmer 2s ease-in-out infinite',
+      },
     },
   },
   plugins: [],
