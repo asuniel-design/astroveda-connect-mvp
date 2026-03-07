@@ -67,7 +67,7 @@ export default function AstroVedaHome() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Consultant Card 1 */}
-            <div className="flex bg-[#FBFBFB] rounded-xl overflow-hidden border border-gray-100 text-left hover:shadow-md transition">
+            <div className="flex bg-white/40 backdrop-blur-lg rounded-xl overflow-hidden border border-gold/20 text-left hover:shadow-md transition">
               <div className="w-1/3 bg-gray-200 flex items-center justify-center text-xs text-gray-400 font-serif text-center p-4">
                 [ US Home Office Asset 1 ]
               </div>
@@ -79,14 +79,14 @@ export default function AstroVedaHome() {
                   <span className="text-lg font-serif text-gray-900">{formatCurrency(49)}</span>
                   <span className="text-xs text-gray-500">per session</span>
                 </div>
-                <button className="text-xs font-semibold tracking-widest border-b border-gray-900 pb-1 w-fit hover:text-[#BFA15C] hover:border-[#BFA15C] transition">
+                <button className="text-xs font-semibold tracking-widest border-b border-gray-900 pb-1 w-fit hover:text-[#BFA15C] hover:border-[#BFA15C] transition shimmer-gold">
                   Start Consultation
                 </button>
               </div>
             </div>
 
             {/* Consultant Card 2 */}
-            <div className="flex bg-[#FBFBFB] rounded-xl overflow-hidden border border-gray-100 text-left hover:shadow-md transition">
+            <div className="flex bg-white/40 backdrop-blur-lg rounded-xl overflow-hidden border border-gold/20 text-left hover:shadow-md transition">
               <div className="w-1/3 bg-gray-200 flex items-center justify-center text-xs text-gray-400 font-serif text-center p-4">
                 [ US Home Office Asset 2 ]
               </div>
@@ -98,7 +98,7 @@ export default function AstroVedaHome() {
                   <span className="text-lg font-serif text-gray-900">{formatCurrency(59)}</span>
                   <span className="text-xs text-gray-500">per session</span>
                 </div>
-                <button className="text-xs font-semibold tracking-widest border-b border-gray-900 pb-1 w-fit hover:text-[#BFA15C] hover:border-[#BFA15C] transition">
+                <button className="text-xs font-semibold tracking-widest border-b border-gray-900 pb-1 w-fit hover:text-[#BFA15C] hover:border-[#BFA15C] transition shimmer-gold">
                   Start Consultation
                 </button>
               </div>
