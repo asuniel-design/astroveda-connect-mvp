@@ -1,8 +1,8 @@
-const { PrismaClient } = require('@prisma/client');
+import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log('🌱 Igniting Sovereign Seed Sequence...');
+  console.log('🌱 Starting Sovereign ESM Seed Sequence...');
   
   const partner = await prisma.identity.upsert({
     where: { email: 'niel@astroveda.io' },
@@ -21,14 +21,14 @@ async function main() {
     },
   });
 
-  console.log('✅ B2B Vault Seeded: ' + partner.email);
+  console.log('✅ B2B Vault Seeded Successfully: ' + partner.email);
 }
 
 main()
-  .catch((e) => { 
-    console.error(e); 
-    process.exit(1); 
+  .catch((e) => {
+    console.error('❌ Seed Failed:', e);
+    process.exit(1);
   })
-  .finally(async () => { 
-    await prisma.$disconnect(); 
+  .finally(async () => {
+    await prisma.$disconnect();
   });
