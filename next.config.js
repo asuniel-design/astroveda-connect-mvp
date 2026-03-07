@@ -1,12 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    turbopack: {
-      // Enable Turbopack
-      enabled: true,
-      // Root directory for Turbopack resolution
-      root: process.cwd(),
-    },
+  // Turbopack configuration
+  turbopack: {
+    // Root directory for Turbopack resolution (avoid multiple lockfiles warning)
+    root: process.cwd(),
   },
   // Enable Turbopack in development
   devIndicators: {
