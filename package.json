@@ -13,7 +13,6 @@
     "@prisma/client": "^7.4.2",
     "@react-pdf/renderer": "^4.3.2",
     "@supabase/supabase-js": "^2.98.0",
-    "@tailwindcss/postcss": "latest",
     "dotenv": "^17.3.1",
     "lucide-react": "^0.577.0",
     "next": "latest",
@@ -30,6 +29,7 @@
     "stripe": "^20.4.0"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.1",
     "autoprefixer": "^10.4.27",
     "postcss": "^8.5.8",
     "prisma": "^7.4.2",
